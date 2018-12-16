@@ -12,8 +12,12 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. -->
 
-<div id="app">
-  <app-header></app-header>
-  <router-outlet></router-outlet>
-  <router-outlet name="modal"></router-outlet>
+<div class="grid" infinite-scroll (scrolled)="onScrollDown()">
+  <app-card 
+    *ngFor="let house of houses" 
+    [id]="house.id" 
+    [name]="house.name" 
+    [color]="house.color" 
+    (click)="routeToHouse($event)">
+  </app-card>
 </div>

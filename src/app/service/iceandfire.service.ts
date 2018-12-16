@@ -14,12 +14,24 @@
  * the License.
  */
 
-import { Component } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
-})
+import { House } from 'app/type';
 
-export class AppComponent { }
+@Injectable()
+export class IceAndFireService {
+  baseUrl: string;
+
+  constructor(private http: HttpClient) {
+    this.baseUrl = 'https://anapioficeandfire.com/api';
+  }
+
+  fetchHouses(page = 1) {
+    return this.http.get<House[]>(`${this.baseUrl}/houses?page=${page}`);
+  }
+
+  fetchHouse(id: number) {
+    return this.http.get<House>(`${this.baseUrl}/houses/${id}`);
+  }
+}

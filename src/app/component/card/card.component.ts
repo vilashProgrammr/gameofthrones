@@ -14,12 +14,29 @@
  * the License.
  */
 
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-card',
+  templateUrl: './card.component.html',
+  styleUrls: ['./card.component.scss'],
 })
+export class CardComponent {
+  @Input() id: Number;
+  @Input() name: string;
+  @Input() color: string;
+  @Output() click = new EventEmitter<any>();
 
-export class AppComponent { }
+  onClick() {
+    this.click.emit({
+      id: this.id,
+    });
+  }
+
+  setBackgroundStyle() {
+    return {
+      background: `radial-gradient(${this.color}, #39393f)`,
+      'box-shadow': `0 0 60px ${this.color}`,
+    };
+  }
+}

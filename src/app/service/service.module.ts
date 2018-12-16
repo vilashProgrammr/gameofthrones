@@ -14,12 +14,22 @@
  * the License.
  */
 
-import { Component } from '@angular/core';
+import { NgModule } from '@angular/core';
+import { IceAndFireService } from './iceandfire.service';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+@NgModule({
+  imports: [],
+  exports: [],
+  declarations: [],
+  providers: [],
 })
+export class ServicesModule {
+  static forRoot() {
+    return {
+      ngModule: ServicesModule,
+      providers: [IceAndFireService],
+    };
+  }
+}
 
-export class AppComponent { }
+export { IceAndFireService };

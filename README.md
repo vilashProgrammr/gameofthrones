@@ -1,28 +1,19 @@
 # GamesOfThrones
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
+The project was built using the backend API: https://anapioficeandfire.com. Below is the existing status of the project:-
+- [x] Integrate the backend API and Show data in front end.
+- [ ] Implement search functionality for easy access to Houses.
+- [ ] Implement Characters page to show and list all characters with search filters name, deadOrAlive
 
-## Development server
+##Task1
+- Currently the project lacks search functionality to filter houses by search functionality.
+- Refer https://anapioficeandfire.com/Documentation#houses to alter the API service implementation to include search queries.
+- The final implementation should have a search functionality implemented which allows user to search houses by their names.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+##Task2
+- Create a new page under the route `/characters`.
+- List all the characters with similiar appeareance as in `/home` page.
+- Implement Search functionality which allows users to search characters by Name, isDead.
+- Use the API mentioned in the documentation:https://anapioficeandfire.com/Documentation#characters
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

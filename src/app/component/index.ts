@@ -14,12 +14,8 @@
  * the License.
  */
 
-import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
-})
-
-export class AppComponent { }
+export { CardComponent } from './card';
+export { HeaderComponent } from './header';
+export { LoaderComponent } from './loader';
+export { ModalComponent } from './modal';
+export { RouteProxyComponent } from './route-proxy';

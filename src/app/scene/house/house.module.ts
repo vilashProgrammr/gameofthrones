@@ -14,12 +14,24 @@
  * the License.
  */
 
-import { Component } from '@angular/core';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+import { ModalComponent, LoaderComponent } from 'app/component';
+
+import { HouseComponent } from './house.component';
+
+const routes: Routes = [
+  {
+    path: '',
+    component: HouseComponent,
+  },
+];
+
+@NgModule({
+  imports: [CommonModule, RouterModule, RouterModule.forChild(routes)],
+  declarations: [HouseComponent, ModalComponent, LoaderComponent],
+  exports: [HouseComponent, RouterModule],
 })
-
-export class AppComponent { }
+export class HouseModule {}

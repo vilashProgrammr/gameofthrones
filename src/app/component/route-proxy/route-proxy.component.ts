@@ -17,9 +17,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-route-proxy',
+  templateUrl: './route-proxy.component.html',
 })
-
-export class AppComponent { }
+export class RouteProxyComponent {}

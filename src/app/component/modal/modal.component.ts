@@ -14,12 +14,17 @@
  * the License.
  */
 
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-modal',
+  templateUrl: './modal.component.html',
+  styleUrls: ['./modal.component.scss'],
 })
+export class ModalComponent {
+  @Output() modalClose: EventEmitter<any> = new EventEmitter<any>();
 
-export class AppComponent { }
+  closeModal() {
+    this.modalClose.next();
+  }
+}

@@ -26,9 +26,9 @@ import {
   HeaderComponent,
   CardComponent,
   RouteProxyComponent,
-} from 'app/component';
-import { HomeComponent } from 'app/scene';
-import { ServicesModule } from 'app/service';
+} from './component';
+import { HomeComponent } from './scene';
+import { ServicesModule } from './service';
 import { environment } from '../environments/environment';
 
 const routePaths: Routes = [
@@ -48,7 +48,7 @@ const routePaths: Routes = [
     children: [
       {
         path: '',
-        loadChildren: 'app/scene/house/house.module#HouseModule',
+        loadChildren: './scene/house/house.module#HouseModule',
       },
     ],
   },

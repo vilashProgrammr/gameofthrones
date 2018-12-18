@@ -17,8 +17,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { IceAndFireService } from 'app/service';
-import { House } from 'app/type';
+import { IceAndFireService } from '../../service';
+import { House } from '../../type';
 
 @Component({
   selector: 'app-home',

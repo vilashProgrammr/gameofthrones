@@ -18,7 +18,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ModalComponent, LoaderComponent } from 'app/component';
+import { ModalComponent, LoaderComponent } from '../../component';
 
 import { HouseComponent } from './house.component';
 

@@ -3,7 +3,7 @@
 The project was built using the backend API: https://anapioficeandfire.com. Below is the existing status of the project:-
 - [x] Integrate the backend API and Show data in front end.
 - [ ] Implement search functionality for easy access to Houses.
-- [ ] Implement Characters page to show and list all characters with search filters name, deadOrAlive
+- [ ] Implement a new Characters page to show and list all characters with search filters name, deadOrAlive
 
 ##Task1
 - Currently the project lacks search functionality to filter houses by search functionality.

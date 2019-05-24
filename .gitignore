@@ -14,6 +14,7 @@
 .classpath
 .c9/
 .theia/
+pmainfile
 *.launch
 .settings/
 *.sublime-workspace
